@@ -1,0 +1,12 @@
+# Mandatory files to create and link in this folder 
+# for WhatsApp bulk message automation
+
+chrome_profile: 
+# Exemples : 
+# Windows 7, 8.1, and 10: user-data-dir=C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Default
+# Mac OS X El Capitan: user-data-dir=Users/<username>/Library/Application Support/Google/Chrome/Default
+# Linux: user-data-dir=/home/<username>/.config/google-chrome/default
+
+message_path: #{folder}/message.txt
+contacts_path: #{folder}/contacts.csv
+attachment_path: #absolute path to the picture : ./../../picture.png
