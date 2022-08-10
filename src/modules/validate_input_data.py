@@ -9,6 +9,21 @@ class InputDataError(Exception):
 
 
 def validate_contacts(data: List[Dict[str, str]]) -> Optional[List[Dict[str, str]]]:
+    """
+    Convert to dataframe and validate : column headers and
+    'WhatsApp Number(with country code)' column pattern as french phone numbers
+    with no missing values nor duplicated values.
+
+    Args:
+        data (List[Dict[str, str]]): Contacts data parsed from csv file.
+
+    Raises:
+        InputDataError: Custom Error to handle input data validation.
+
+    Returns:
+        Optional[List[Dict[str, str]]]: Unchanged input data or raises error.
+    """
+
     columns = {
         "WhatsApp Number(with country code)",
         "Saved Name",
